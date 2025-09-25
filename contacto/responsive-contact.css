@@ -1,4 +1,6 @@
 @media screen and (max-width: 900px) {
+    
+    
     .initial-container h1 {
         font-size: 30px;
         margin-top: 130px;
@@ -7,6 +9,7 @@
         animation: fade 2s ease-in forwards; 
         border-right: none; 
     }
+
 
     .initial-container p {
         font-size: 17px;

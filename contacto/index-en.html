@@ -38,6 +38,9 @@
                 <span>|</span>
                 <a href="./index-en.html" lang="en">EN</a>
             </div>
+            <button class="music-btn" onclick="toggleMusic()">
+                <i class="bi bi-music-note-beamed"></i>
+            </button>
             <a class="login-btn" href="./login/index-en.html"><i class="bi bi-box-arrow-in-right"></i></a>
             <input type="checkbox" id="menu-btn" class="menu-btn">
             <label for="menu-btn" class="menu-burger">
@@ -56,6 +59,10 @@
                             <li><a href="#">Project3</a></li>
                         </ul>
                     </li>
+                    <button class="music-btn-layer" onclick="toggleMusic()">
+                        <i class="bi bi-music-note-beamed"></i>
+                    </button>
+                    <audio id="audioPlayer"></audio>
                     <li class="login"><a class="login" href="../login/index-en.html"> <i class="bi bi-box-arrow-in-right"></i> Login</a></li>
                 </ul>
             </div>
@@ -143,5 +150,6 @@
             </p>
         </div>
     </footer>
+    <script src="../js/music.js"></script>
 </body>
 </html>

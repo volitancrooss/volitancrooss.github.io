@@ -55,6 +55,7 @@ main::before {
 .title-container > span {
     display: inline-block;
     text-transform: uppercase;
+    margin-top: 100px;
     animation: glow 2s ease-in-out infinite;
     font-size: clamp(50px, 5vw, 40px);
     font-family: "Designer", sans-serif;

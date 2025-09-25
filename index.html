@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="alternate" hreflang="es" href="./index.html">
     <title>Alexander web</title>
-    <meta http-equiv="refresh" content="0; url=./index.html">
 </head>
 <body>
     <header>
@@ -33,6 +32,11 @@
                     </li>
                 </ul>
             </div>
+            <!-- Botón de Música -->
+            <button class="music-btn" onclick="toggleMusic()">
+                <i class="bi bi-music-note-beamed"></i>
+            </button>
+            <audio id="audioPlayer"></audio>
             <a class="login-btn" href="./login/index.html"><i class="bi bi-box-arrow-in-right"></i></a>
             <div class="language-switch">
                 <a href="./index.html" lang="es">ES</a>
@@ -56,6 +60,10 @@
                             <li><a href="#">Proyecto3</a></li>
                         </ul>
                     </li>
+                    <button class="music-btn-layer" onclick="toggleMusic()">
+                        <i class="bi bi-music-note-beamed"></i>
+                    </button>
+                    <audio id="audioPlayer"></audio>
                     <li class="login"><a class="login" href="./login/index.html"> <i class="bi bi-box-arrow-in-right"></i> Login</a></li>
                 </ul>
             </div>
@@ -67,7 +75,7 @@
             <section id="secOne">
                 <div class="info-container">
                     <h1>¿Quién Soy?</h1>
-                    <p>Hola soy <i class="bi bi-person-badge-fill"></i> Alexander y este es mi portfolio donde me presento como informatico aquí mostraré mis distintos conocimientos sobre el mundo de la programación.</p>
+                    <p>· Hola soy <i class="bi bi-person-badge-fill"></i> Alexander y este es mi portfolio donde me presento como informatico aquí mostraré mis distintos conocimientos sobre el mundo de la programación.</p>
                     <img src="./images/img1.jpg" alt="imagen" class="img-info">
                 </div>
                 <div class="presentation">
@@ -77,9 +85,9 @@
                 </div>
                 <div class="register-container">
                     <h1>¿Quieres unirte a la comunidad?</h1>
-                    <p>Para unirte a la comunidad y contribuir con nosotros registrate y no te pierdas una públicación</p>
+                    <p>· Para unirte a la comunidad y contribuir con nosotros registrate y no te pierdas una públicación</p>
                     <img src="./images/comunidad.png" alt="imagen2" class="register-container">
-                    <a href="#">Registrate aquí</a>
+                    <a href="#">¡Registrate aquí!</a>
                 </div>
 
             </section>
@@ -173,5 +181,6 @@
 
         </div>
     </footer>
+    <script src="./js/music.js"></script>
 </body>
 </html>

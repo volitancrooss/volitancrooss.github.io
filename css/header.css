@@ -9,13 +9,13 @@
     
 nav {
     display: grid;
-    grid-template: "logo menu language boton" 110px /
-                    300px 1fr auto;
+    grid-template: "logo menu  music language boton" 110px /
+                    200px 1fr auto auto auto auto;
     z-index: 100;
     position: fixed;
     width: 100%;
-    top: 0;
-    
+    bottom: 81.5%;
+
 
 }
 
@@ -68,6 +68,69 @@ nav ul li {
     align-items: center;
     justify-content: center;
 }
+
+.music-btn-layer {
+    position: relative;
+    right: 45%;
+    bottom: 165px;
+    display: none;
+    margin: 0px 10px 0px 0px;
+    font-size: 1.3rem;
+    background: rgb(199, 233, 255);
+    width: 40px;
+    height: 30px;
+    align-self: center;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 5px 30px black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.music-btn {
+    margin: 0px 10px 0px 0px;
+    font-size: 1.3rem;
+    background: rgb(199, 233, 255);
+    width: 40px;
+    height: 30px;
+    align-self: center;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 5px 30px black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.music-btn:hover, .music-btn-layer:hover {
+    box-shadow: 5px 5px 30px rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
+.music-btn.playing, .music-btn-layer.playing {
+    background: rgb(135, 135, 234);
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(135, 135, 234, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(135, 135, 234, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(135, 135, 234, 0);
+    }
+}
+
 
 
 ul li a {
@@ -345,6 +408,12 @@ html[lang="en"] .language-switch a[lang="en"] {
         display: block;
     }
 
+    #menu-btn:checked ~ .music-btn {
+        display: flex;
+        margin: 20px auto;
+        position: static;
+    }
+
     .layer {
         position: fixed;
         top: 0;
@@ -398,6 +467,8 @@ html[lang="en"] .language-switch a[lang="en"] {
         transition: all 0.3s ease;
         background-color: #2c3e50;
     }
+
+    
 
 
     #menu-btn:checked ~ .layer {
