@@ -303,6 +303,17 @@ html[lang="en"] .language-switch a[lang="en"] {
     transform: rotate(2deg);
   }
 
+  @media screen and (max-width: 1680px) {
+    nav {
+        width: 100%;
+        
+        
+    }
+
+    
+    
+  }
+
   @media (max-width: 1024px) {
     nav {
         grid-template-columns: 150px minmax(300px, 1fr) auto auto;
