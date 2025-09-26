@@ -51,15 +51,36 @@
     }
 }
 
+ @media screen and (max-width: 1680px) {
+    nav {
+        position: relative;
+        bottom: 0px;
+    }
+    
+ }
+
 
 
 @media (max-width: 1144px) {
+    nav {
+        position: relative;
+        bottom: 0px;
+    }
     #secTwo h1 {
         font-size: 1.4rem;
     }
     .initial-container h1 {
         font-size: 30px
     }
+
+@media (max-width: 1182px) {
+    nav {
+        position: relative;
+        bottom: 12px;
+    }
+    nav .img {
+    }
+}
 
 @media (max-width: 900px) {
     
