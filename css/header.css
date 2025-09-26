@@ -474,5 +474,8 @@ html[lang="en"] .language-switch a[lang="en"] {
     #menu-btn:checked ~ .layer {
         display: block;
     }
+    .music-btn {
+        display: none;
+    }
 
 }
