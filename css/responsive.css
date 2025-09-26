@@ -1,4 +1,19 @@
-@media (max-width: 3000px) {
+@media screen and (min-width: 2000px) {
+    nav {
+        width: 100%;
+        position: relative;
+        bottom: 0px;
+    }
+    #secOne {
+        width: 100% !important;
+        position: relative;
+        left: 20% !important;
+    }
+    
+ }
+    
+}
+@media (max-width: 1400px) {
     
 
     nav {
@@ -86,9 +101,12 @@
         bottom: 0px;
     }
     #secOne {
-        width: 93% !important;
-        left: 5%;
+        width: 100% !important;
+        bottom: 50px;
+        position: relative;
+        left: 0%;
     }
+
     
  }
 
