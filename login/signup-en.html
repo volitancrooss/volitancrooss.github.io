@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="./signup.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Alexander's Sign Up</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="../images/logo.png" alt="logo">
+            <div id="menu">
+            <ul id="menu">
+                <li><a href="../index-en.html">Home</a></li>
+                <li><a href="../contacto/index-en.html">Contact</a></li>
+                <li><a href="../socials/index-en.html">Socials</a></li>
+                <li><a href="../services/index-en.html">Services <i class="bi bi-caret-down-fill"></i></a>
+                    <ul class="list-services">
+                        <li><a href="#">Project1</a></li>
+                        <li><a href="#">Project2</a></li>
+                        <li><a href="#">Project3</a></li>
+                    </ul>
+                </li>
+            </ul>
+            </div>
+            <button class="music-btn" onclick="toggleMusic()">
+                        <i class="bi bi-music-note-beamed"></i>
+                    </button>
+                    <audio id="audioPlayer"></audio>
+            <a class="login-btn" href="index-en.html"><i class="bi bi-box-arrow-in-right"></i></a>
+            <div class="language-switch">
+                <a href="signup.html" lang="es">ES</a>
+                <span>|</span>
+                <a href="signup-en.html" lang="en">EN</a>
+            </div>
+            <input type="checkbox" id="menu-btn" class="menu-btn">
+            <label for="menu-btn" class="menu-burger">
+                <i class="bi bi-list menu-open"></i>
+                <i class="bi bi-x-lg menu-close"></i>
+            </label>
+            <div class="layer">
+                <ul>
+                    <li><a href="../index-en.html">Home</a></li>
+                    <li><a href="../contacto/index-en.html">Contact</a></li>
+                    <li><a href="../socials/index-en.html">Socials</a></li>
+                    <li><a href="../services/index-en.html">Services <i class="bi bi-caret-down-fill"></i></a>
+                        <ul class="list-services">
+                            <li><a href="#">Project1</a></li>
+                            <li><a href="#">Project2</a></li>
+                            <li><a href="#">Project3</a></li>
+                        </ul>
+                    </li>´
+                    <button class="music-btn-layer" onclick="toggleMusic()">
+                        <i class="bi bi-music-note-beamed"></i>
+                    </button>
+                    <audio id="audioPlayer"></audio>
+                    <li class="login"><a class="login" href="index-en.html"> <i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+                </ul>
+            </div>
+            <div class="wave"></div>
+        </nav>
+    </header>
+    <main>
+        <div class="signup-container">
+            <form id="signupForm">
+                <div class="logo-container">
+                    <img src="../images/logo.png" alt="logo">
+                </div>
+                <h1>Create Account</h1>
+                
+                <div class="signup">
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                    <i class="bi bi-person-fill"></i>
+                </div>
+                
+                <div class="signup">
+                    <input type="email" id="email" placeholder="Email" required>
+                    <i class="bi bi-envelope-fill"></i>
+                </div>
+                
+                <div class="signup">
+                    <input type="password" id="password" placeholder="Password" required minlength="6">
+                    <i class="bi bi-lock-fill"></i>
+                </div>
+                
+                <div class="signup">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required minlength="6">
+                    <i class="bi bi-shield-lock-fill"></i>
+                </div>
+                
+                <div class="terms-check">
+                    <label><input type="checkbox" id="acceptTerms" required>I accept the <a href="#" id="termsLink" style="padding-left: 5px;">terms and conditions</a></label>
+                </div>
+                
+                <button type="submit" class="btn">Create Account</button>
+                
+                <div class="login-link">
+                    <p>Already have an account? <a href="index-en.html">Sign in here</a></p>
+                </div>
+                
+                <div id="errorMessage" class="error-message"></div>
+                <div id="successMessage" class="success-message"></div>
+            </form>
+        </div>
+        
+        <div class="card-info">
+            <div class="card">
+                <i class="bi bi-person-plus-fill"></i>
+                <h3>Quick Registration</h3>
+                <p>Create your account in seconds and access all our resources.</p>
+            </div>
+            
+            <div class="card">
+                <i class="bi bi-shield-check"></i>
+                <h3>Secure Data</h3>
+                <p>Your personal information is protected with the highest security standards.</p>
+            </div>
+            
+            <div class="card">
+                <i class="bi bi-gift-fill"></i>
+                <h3>Exclusive Benefits</h3>
+                <p>Get access to premium content and personalized notifications.</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="foo-socials">
+            <p>Alexander &copy; 2025 <br>
+                <a href="#">· Visit My Social Media</a>
+                <br>
+                <a href="#"><i class="bi bi-instagram"> Follow me</i></a>
+                <br>
+                <a href="#"><i class="bi bi-whatsapp"> Contact me</i></a>
+                <br>
+                <a href="#"><i class="bi bi-envelope-at-fill"> Send me an email</i></a>
+            </p>
+        </div>
+        <div class="foo-pub">
+            <p>Visit my latest Posts <br>
+                <a href="../index-en.html">· Home</a>
+                <a href="../contacto/index-en.html">· Contact</a>
+                <a href="../socials/index-en.html">· Socials</a>
+                <a href="../services/index-en.html">· Services</a>
+                <a href="./index-en.html">· Login</a>
+            </p>
+        </div>
+        <div class="tributo">
+            <p>Designed by me.
+                <br>
+                <a href="#">· Privacy Policy</a>
+                <br>
+                <a href="#">· Terms and Conditions</a>
+                <br>
+                <a href="#">· Cookies</a>
+            </p>
+        </div>
+    </footer>
+    
+    <script type="module">
+        // Import Firebase from CDN
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCjqBphIDL44onQTdci5VnU9-aggg4KC3o",
+            authDomain: "volitancrooss-page.firebaseapp.com",
+            projectId: "volitancrooss-page",
+            storageBucket: "volitancrooss-page.appspot.com",
+            messagingSenderId: "TU_SENDER_ID",
+            appId: "TU_APP_ID",
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // Function to show errors
+        function showError(message) {
+            const errorDiv = document.getElementById("errorMessage");
+            const successDiv = document.getElementById("successMessage");
+            errorDiv.textContent = message;
+            errorDiv.style.display = "block";
+            successDiv.style.display = "none";
+        }
+
+        // Function to show success
+        function showSuccess(message) {
+            const errorDiv = document.getElementById("errorMessage");
+            const successDiv = document.getElementById("successMessage");
+            successDiv.textContent = message;
+            successDiv.style.display = "block";
+            errorDiv.style.display = "none";
+        }
+
+        // Function to clear messages
+        function clearMessages() {
+            document.getElementById("errorMessage").style.display = "none";
+            document.getElementById("successMessage").style.display = "none";
+        }
+
+        // Function to validate passwords
+        function validatePasswords(password, confirmPassword) {
+            if (password !== confirmPassword) {
+                showError("Passwords do not match");
+                return false;
+            }
+            if (password.length < 6) {
+                showError("Password must be at least 6 characters long");
+                return false;
+            }
+            return true;
+        }
+
+        // Function to register user
+        async function registerUser(email, password, fullName) {
+            try {
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                
+                // Update user profile with full name
+                await updateProfile(userCredential.user, {
+                    displayName: fullName
+                });
+
+                showSuccess(`✅ Account created successfully! Welcome ${fullName}`);
+                
+                // Redirect after 2 seconds
+                setTimeout(() => {
+                    window.location.href = "index-en.html";
+                }, 2000);
+                
+            } catch (error) {
+                switch (error.code) {
+                    case "auth/email-already-in-use":
+                        showError("❌ This email address is already registered.");
+                        break;
+                    case "auth/invalid-email":
+                        showError("❌ Invalid email address.");
+                        break;
+                    case "auth/weak-password":
+                        showError("❌ Password is too weak. Must be at least 6 characters.");
+                        break;
+                    default:
+                        showError("❌ Error creating account: " + error.message);
+                }
+            }
+        }
+
+        // Capture signup form
+        const signupForm = document.getElementById("signupForm");
+        if (signupForm) {
+            signupForm.addEventListener("submit", async (e) => {
+                e.preventDefault();
+                clearMessages();
+                
+                const fullName = document.getElementById("fullName").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const password = document.getElementById("password").value;
+                const confirmPassword = document.getElementById("confirmPassword").value;
+                const acceptTerms = document.getElementById("acceptTerms").checked;
+                
+                // Validations
+                if (!fullName) {
+                    showError("❌ Please enter your full name");
+                    return;
+                }
+                
+                if (!acceptTerms) {
+                    showError("❌ You must accept the terms and conditions");
+                    return;
+                }
+                
+                if (validatePasswords(password, confirmPassword)) {
+                    await registerUser(email, password, fullName);
+                }
+            });
+        }
+
+        // Real-time password validation
+        document.getElementById("confirmPassword").addEventListener("input", function() {
+            const password = document.getElementById("password").value;
+            const confirmPassword = this.value;
+            
+            if (confirmPassword && password !== confirmPassword) {
+                this.style.borderColor = "#ff4444";
+            } else {
+                this.style.borderColor = "";
+            }
+        });
+    </script>
+    <script src="../js/music.js"></script>
+</body>
+</html>
