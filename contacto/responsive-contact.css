@@ -101,5 +101,9 @@
         font-size: 28px;
         text-align: center;
     }
+
+    .music-btn {
+        display: none;
+    }
 }
 

@@ -43,31 +43,75 @@ body {
     white-space: nowrap;
     width: 0;
     display: inline-block;
-    border-right: 3px solid white;
+    position: relative;
     animation: 
-    typing 5s linear infinite,
-    blink 1s linear infinite;
-    
-    
+        typing 5s linear infinite,
+        blink 1s linear infinite;
+}
 
+.initial-container h1::after {
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-image: url('../images/alien-hand.png'); /* Add your alien hand image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 0 5px rgba(124, 124, 207, 0.8));
+    animation: alienHand 5s linear infinite;
 }
 
 @keyframes typing {
-    0% { width: 100%;
-        color: white;}
-    40% { width: 0%; }
-    50% {
-        color: blue;
+    0% { 
+        width: 100%;
+        color: white;
     }
-    60% { width: 0%;}
-    
-    100% { width: 100%; 
-        color: white;}
+    40% { 
+        width: 0%;
+    }
+    50% {
+        color: rgb(124, 124, 207);
+    }
+    60% { 
+        width: 0%;
+    }
+    100% { 
+        width: 100%;
+        color: white;
+    }
+}
+
+@keyframes alienHand {
+    0% {
+        transform: translateY(-0%) rotate(-100deg) scale(1);
+        padding-left: 0;
+        filter: drop-shadow(0 0 5px rgba(124, 124, 207, 0.8));
+    }
+    40% {
+        transform: translateY(-50%) rotate(-100deg) scale(1.2);
+        filter: drop-shadow(0 0 15px rgba(124, 124, 207, 1));
+    }
+    50% {
+        transform: translateY(-50%) rotate(-100deg) scale(1.4);
+        filter: drop-shadow(0 0 20px rgba(124, 124, 207, 1));
+    }
+    60% {
+        transform: translateY(-50%) rotate(-100deg) scale(1.2);
+        filter: drop-shadow(0 0 15px rgba(124, 124, 207, 1));
+    }
+    100% {
+        transform: translateY(-50%) rotate(-100deg) scale(1);
+        filter: drop-shadow(0 0 5px rgba(124, 124, 207, 0.8));
+    }
 }
 
 @keyframes blink {
     50% {
         border-color: transparent;
+        filter: drop-shadow(0 0 20px rgba(124, 124, 207, 1));
     }
 }
 
@@ -91,6 +135,7 @@ body {
         0 10px 30px rgba(0, 0, 0, 0.3),
         inset 0 0 0 1px rgba(255, 255, 255, 0.1);
     margin: 0 auto 100px;
+    margin-top: 20px;
     border-radius: 15px;
     transition: all 0.3s ease;
     animation: fadeIn 1s ease-out forwards;
