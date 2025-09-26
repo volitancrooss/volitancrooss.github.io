@@ -86,7 +86,7 @@
     
     .wave::before {
         
-        right: -7%;
+        right: 0%;
         top: 30%;
         transform: rotate(1deg);
       }
