@@ -5,7 +5,7 @@
         bottom: 0px;
     }
     #secOne {
-        width: 100% !important;
+        width: 120% !important;
         position: relative;
         left: 20% !important;
     }
@@ -18,6 +18,7 @@
 
     nav {
         width: 103% !important;
+        position: relative;
     }
 
     nav img {
@@ -55,13 +56,14 @@
         position: relative;
         width: 840px !important;
         bottom: 50px;
+        height: 50% !important;
         margin: 0;
         right: 0px;
     }
 
     .background {
         width: 100%;
-        height: 100%;
+        height: 0%;
         position: fixed;
         right: 10%;
         top: 0%;
@@ -106,7 +108,11 @@
         position: relative;
         left: 0%;
     }
-
+     #secThree {
+        position: relative;
+        width: 100%;
+        left: 0px;
+        bottom: 50px;
     
  }
 
@@ -115,7 +121,7 @@
 @media (max-width: 1144px) {
     nav {
         position: relative;
-        bottom: 0px;
+        bottom: 87% !important;
     }
     #secTwo h1 {
         font-size: 1.4rem;
@@ -123,6 +129,21 @@
     .initial-container h1 {
         font-size: 30px
     }
+
+     #secThree {
+    height: 90vh !important;
+    width: 100%;
+    height: 500px;
+    margin: 0;
+    bottom: 200px !important;
+    padding: 125px 0px 125px 0px;
+    display: grid;
+    grid-template:
+    "progress skills" 500px;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
 
 @media (max-width: 1182px) {
     nav {

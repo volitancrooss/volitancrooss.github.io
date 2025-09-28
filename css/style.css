@@ -561,10 +561,11 @@ html[lang="en"] .language-switch a[lang="en"] {
 #secTwo {
     background-color: rgb(167, 158, 158);
     width: 100%;
+    position: relative;
+    bottom: 50px;
     box-shadow: 1px 1px 50px black;
     background-image: radial-gradient(black 10%, transparent 10%);
     background-size: 10px 10px;
-    margin: 0;
     padding: 0px 0px 0px 0px;
     display: grid;
     grid-template:
@@ -635,7 +636,9 @@ html[lang="en"] .language-switch a[lang="en"] {
 }
 
 #secThree {
+    height: 40vh;
     width: 100%;
+    height: 500px;
     margin: 0;
     padding: 125px 0px 125px 0px;
     display: grid;
@@ -702,9 +705,9 @@ html[lang="en"] .language-switch a[lang="en"] {
     position: fixed;
     z-index: -1;
     width: 100vw;
-    height: 110vh;
+    height: 100vh;
     border-radius: 0;
-    top: 0%;
+    top: 0px;
     background: #384d8d;
     overflow: hidden;
 }
