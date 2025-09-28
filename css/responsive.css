@@ -116,12 +116,17 @@
     
  }
 
+@media screen and (max-width: 1024px){
+    nav {
+        position: relative ;
+    }
+}
+
 
 
 @media (max-width: 1144px) {
     nav {
         position: relative;
-        bottom: 87% !important;
     }
     #secTwo h1 {
         font-size: 1.4rem;
