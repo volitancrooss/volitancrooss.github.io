@@ -511,6 +511,8 @@
         background-position: center;
         background-attachment: scroll;
         transform: none;
+        position: relative;
+        bottom: 40px !important;
     }
 
     #secOne > div {
