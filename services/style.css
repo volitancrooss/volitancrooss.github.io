@@ -4,78 +4,347 @@
     box-sizing: border-box;
 }
 
-
-
-main {
-    padding: 20px;
-    margin: 0 auto;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
-    background: linear-gradient(135deg, rgba(0, 105, 211, 0.9), rgba(27, 36, 46, 0.9));
-    flex-direction: column;
-
+body {
+    overflow-x: hidden;
 }
 
+main {
+    padding: 120px 20px 40px 20px;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(0, 105, 211, 0.95), rgba(27, 36, 46, 0.95));
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
 
+/* Efecto de fondo animado */
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
 
 main .title {
     display: flex;
     justify-content: center;
+    align-items: center;
     color: rgb(255, 255, 255);
-    font-size: 50px;
-    margin-top: 40px;
-    margin-bottom: 15px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 50px;
+    margin-top: 0;
     animation: change-color 5s linear infinite;
     font-family: "Designer", sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 15px;
 }
 
 @keyframes change-color {
-    0% { color: white;}
-    50% { color: rgb(149, 149, 245);}
-    100% { color: white;}
-}
-.project {
-    background: rgba(24, 24, 24, 0.301);
-    margin: 5px 0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.1);
+    0% { 
+        color: white;
+        text-shadow: 
+            2px 2px 4px rgba(0, 0, 0, 0.3),
+            0 0 20px rgba(255, 255, 255, 0.2);
+    }
+    50% { 
+        color: rgb(149, 149, 245);
+        text-shadow: 
+            2px 2px 4px rgba(0, 0, 0, 0.3),
+            0 0 30px rgba(149, 149, 245, 0.5);
+    }
+    100% { 
+        color: white;
+        text-shadow: 
+            2px 2px 4px rgba(0, 0, 0, 0.3),
+            0 0 20px rgba(255, 255, 255, 0.2);
+    }
 }
 
+/* Contenedor de proyectos con grid */
+.projects-grid,
+main > section {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 15px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos para la fecha del proyecto */
+.project-date {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.project {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Efecto de brillo en hover */
+.project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: left 0.5s;
+}
+
+.project:hover::before {
+    left: 100%;
+}
+
+.project:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 
+        0 15px 45px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.2),
+        0 0 50px rgba(149, 149, 245, 0.2);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Iconos de calendario */
 .bi-calendar-check-fill {
     color: rgb(172, 248, 172);
+    filter: drop-shadow(0 0 5px rgba(172, 248, 172, 0.5));
+    animation: glow-green 2s ease-in-out infinite;
 }
 
 .bi-calendar2-x-fill {
     color: rgb(243, 133, 133);
+    filter: drop-shadow(0 0 5px rgba(243, 133, 133, 0.5));
+    animation: glow-red 2s ease-in-out infinite;
+}
+
+@keyframes glow-green {
+    0%, 100% { filter: drop-shadow(0 0 5px rgba(172, 248, 172, 0.5)); }
+    50% { filter: drop-shadow(0 0 10px rgba(172, 248, 172, 0.8)); }
+}
+
+@keyframes glow-red {
+    0%, 100% { filter: drop-shadow(0 0 5px rgba(243, 133, 133, 0.5)); }
+    50% { filter: drop-shadow(0 0 10px rgba(243, 133, 133, 0.8)); }
 }
 
 .project h2 {
-    margin-bottom: 10px;
-    font-family: "tommy";
+    margin-bottom: 15px;
+    font-family: "tommy", sans-serif;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    line-height: 1.4;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
-
 .project p {
-    font-family: "Roboto";
-    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
 .project-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #324558;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #324558, #1e3243);
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+}
+
+.project-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.project-link:hover::before {
+    width: 300px;
+    height: 300px;
 }
 
 .project-link:hover {
-    background: #1a252f;
-    transition: all 0.3s;
-    transform: scale(1.1);
+    background: linear-gradient(135deg, #1a252f, #0f1820);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-link i {
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsividad mejorada */
+@media (max-width: 768px) {
+    main {
+        padding: 100px 15px 30px 15px;
+    }
+
+    main .title {
+        margin-bottom: 35px;
+        font-size: 2rem;
+    }
+
+    .projects-grid,
+    main > section {
+        gap: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        padding: 25px;
+    }
+
+    .project h2 {
+        font-size: 1.3rem;
+    }
+
+    .project p {
+        font-size: 0.95rem;
+    }
+
+    .project-link {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 90px 10px 20px 10px;
+    }
+
+    main .title {
+        font-size: 1.75rem;
+        margin-bottom: 30px;
+    }
+
+    .project {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .project h2 {
+        font-size: 1.1rem;
+        gap: 5px;
+    }
+
+    .project p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .project-link {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+        gap: 5px;
+    }
+}
+
+/* Mejoras para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .projects-grid,
+    main > section {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .project {
+        padding: 28px;
+    }
+}
+
+/* Animación de entrada para los proyectos */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.project:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.project:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.project:nth-child(3) {
+    animation-delay: 0.3s;
 }

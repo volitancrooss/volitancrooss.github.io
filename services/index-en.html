@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css"><title>Alexander</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Alexander - Services</title>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -12,38 +13,44 @@
 <body>
     <header>
         <nav>
-            
             <img src="../images/logo.png" alt="logo">
             
             <div class="menu">
-            <ul>
-                <li><a href="../index-en.html">Home</a></li>
-                <li><a href="../contacto/index-en.html">Contact</a></li>
-                <li><a href="../socials/index-en.html">Socials</a></li>
-                <li><a href="../services/index-en.html">Services <i class="bi bi-caret-down-fill"></i></a>
-                    <ul class="list-services">
-                        <li><a href="#">Project 1</a></li>
-                        <li><a href="#">Project 2</a></li>
-                        <li><a href="#">Project 3</a></li>
-                    </ul>
-                </li>
-            </ul>
+                <ul>
+                    <li><a href="../index-en.html">Home</a></li>
+                    <li><a href="../contacto/index-en.html">Contact</a></li>
+                    <li><a href="../socials/index-en.html">Socials</a></li>
+                    <li><a href="../services/index-en.html">Services <i class="bi bi-caret-down-fill"></i></a>
+                        <ul class="list-services">
+                            <li><a href="#">Project 1</a></li>
+                            <li><a href="#">Project 2</a></li>
+                            <li><a href="#">Project 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
+
             <button class="music-btn" onclick="toggleMusic()">
                 <i class="bi bi-music-note-beamed"></i>
             </button>
             <audio id="audioPlayer"></audio>
-            <a class="login-btn" href="../login/index-en.html"><i class="bi bi-box-arrow-in-right"></i></a>
+            
+            <a class="login-btn" href="../login/index-en.html">
+                <i class="bi bi-box-arrow-in-right"></i>
+            </a>
+            
             <div class="language-switch">
                 <a href="./index.html" lang="es">ES</a>
                 <span>|</span>
                 <a href="./index-en.html" lang="en">EN</a>
             </div>
+            
             <input type="checkbox" id="menu-btn" class="menu-btn">
             <label for="menu-btn" class="menu-burger">
                 <i class="bi bi-list menu-open"></i>
                 <i class="bi bi-x-lg menu-close"></i>
             </label>
+            
             <div class="layer">
                 <ul>
                     <li><a href="../index-en.html">Home</a></li>
@@ -60,61 +67,97 @@
                         <i class="bi bi-music-note-beamed"></i>
                     </button>
                     <audio id="audioPlayer"></audio>
-                    <li class="login"><a class="login" href="../login/index.html"> <i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+                    <li class="login">
+                        <a class="login" href="../login/index.html">
+                            <i class="bi bi-box-arrow-in-right"></i> Login
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="wave"></div>
         </nav>
-        <main>
-            <h1 class="title">Ongoing Projects!</h1>
-            <section class="project" id="project1">
-                <h2>- Project 1</h2>
-                <p>Project 1 Description.</p>
-                <a href="./proyecto1.html" class="project-link">View Project 1</a>
-            </section>
-            <section class="project" id="project2">
-                <h2>- Project 2</h2>
-                <p>Project 2 Description.</p>
-                <a href="proyecto2.html" class="project-link">View Project 2</a>
-            </section>
-            <section class="project" id="project3">
-                <h2>- Project 3</h2>
-                <p>Project 3 Description.</p>
-                <a href="proyecto3.html" class="project-link">View Project 3</a>
-            </section>
-        </main>
-        <footer>
-            <div class="foo-socials">
-                <p>Alexander &copy; 2025 <br>
-                    <a href="#">· Visit My Social Media</a>
-                    <br>
-                    <a href="#"><i class="bi bi-instagram"> Follow me</i></a>
-                    <br>
-                    <a href="#"><i class="bi bi-whatsapp"> Contact me</i></a>
-                    <br>
-                    <a href="#"><i class="bi bi-envelope-at-fill"> Send me an email</i></a>
-                </p>
-            </div>
-            <div class="foo-pub">
-                <p>Visit my Latest Posts <br>
-                    <a href="../index-en.html">· Home</a>
-                    <a href="../contacto/index-en.html">· Contact</a>
-                    <a href="../socials/index-en.html">· Social</a>
-                    <a href="./index-en.html">· Services</a>
-                    <a href="../login/index-en.html">· Login</a>
-                </p>
-            </div>
-            <div class="tributo">
-                <p>Designed by me.
-                    <br>
-                    <a href="#">· Privacy Policy</a>
-                    <br>
-                    <a href="#">· Terms and Conditions</a>
-                    <br>
-                    <a href="#">· Cookies</a>
-                </p>
-            </div>
-        </footer>
-        <script src="../js/music.js"></script>
+    </header>
+
+    <main>
+        <h1 class="title">Ongoing Projects!</h1>
+        
+        <section class="projects-grid">
+            <article class="project" id="project1">
+                <h2>
+                    <span>Project 1</span>
+                    <i class="bi bi-calendar-check-fill"></i>
+                </h2>
+                <p class="project-date">Date: 03/10/2025</p>
+                <p>Project 1 Description. An innovative project that combines technology and creativity to offer unique solutions.</p>
+                <a href="./proyecto1.html" class="project-link">
+                    View Project 1
+                    <i class="bi bi-kanban-fill"></i>
+                </a>
+            </article>
+
+            <article class="project" id="project2">
+                <h2>
+                    <span>Project 2</span>
+                    <i class="bi bi-calendar-check-fill"></i>
+                </h2>
+                <p class="project-date">Date: 03/10/2025</p>
+                <p>Project 2 Description. An initiative focused on improving user experience through modern interfaces.</p>
+                <a href="./proyecto2.html" class="project-link">
+                    View Project 2
+                    <i class="bi bi-kanban-fill"></i>
+                </a>
+            </article>
+
+            <article class="project" id="project3">
+                <h2>
+                    <span>Project 3</span>
+                    <i class="bi bi-calendar2-x-fill"></i>
+                </h2>
+                <p class="project-date">Date: To be defined</p>
+                <p>Project 3 Description. An ambitious project that is in the planning phase and will be available soon.</p>
+                <a href="./proyecto3.html" class="project-link">
+                    View Project 3
+                    <i class="bi bi-kanban-fill"></i>
+                </a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foo-socials">
+            <p>Alexander &copy; 2025 <br>
+                <a href="#">· Visit My Social Media</a>
+                <br>
+                <a href="#"><i class="bi bi-instagram"></i> Follow me</a>
+                <br>
+                <a href="#"><i class="bi bi-whatsapp"></i> Contact me</a>
+                <br>
+                <a href="#"><i class="bi bi-envelope-at-fill"></i> Send me an email</a>
+            </p>
+        </div>
+        
+        <div class="foo-pub">
+            <p>Visit my Latest Posts <br>
+                <a href="../index-en.html">· Home</a>
+                <a href="../contacto/index-en.html">· Contact</a>
+                <a href="../socials/index-en.html">· Social</a>
+                <a href="./index-en.html">· Services</a>
+                <a href="../login/index-en.html">· Login</a>
+            </p>
+        </div>
+        
+        <div class="tributo">
+            <p>Designed by me.
+                <br>
+                <a href="#">· Privacy Policy</a>
+                <br>
+                <a href="#">· Terms and Conditions</a>
+                <br>
+                <a href="#">· Cookies</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../js/music.js"></script>
 </body>
 </html>

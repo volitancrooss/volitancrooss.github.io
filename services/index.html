@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css"><title>Alexander</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Alexander - Services</title>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -12,39 +13,45 @@
 <body>
     <header>
         <nav>
-            
             <img src="../images/logo.png" alt="logo">
             
             <div class="menu">
-            <ul id="menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../contacto/index.html">Contacto</a></li>
-                <li><a href="../socials/index.html">Socials</a></li>
-                <li><a href="./index.html">Services <i class="bi bi-caret-down-fill"></i></a>
-                    <ul class="list-services">
-                        <li><a href="#">Proyecto1</a></li>
-                        <li><a href="#">Proyecto2</a></li>
-                        <li><a href="#">Proyecto3</a></li>
-                    </ul>
-                </li>
-            </ul>
+                <ul id="menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../contacto/index.html">Contacto</a></li>
+                    <li><a href="../socials/index.html">Socials</a></li>
+                    <li><a href="./index.html">Services <i class="bi bi-caret-down-fill"></i></a>
+                        <ul class="list-services">
+                            <li><a href="#">Proyecto1</a></li>
+                            <li><a href="#">Proyecto2</a></li>
+                            <li><a href="#">Proyecto3</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
+
             <!-- Botón de Música -->
             <button class="music-btn" onclick="toggleMusic()">
                 <i class="bi bi-music-note-beamed"></i>
             </button>
             <audio id="audioPlayer"></audio>
-            <a class="login-btn" href="../login/index.html"><i class="bi bi-box-arrow-in-right"></i></a>
+            
+            <a class="login-btn" href="../login/index.html">
+                <i class="bi bi-box-arrow-in-right"></i>
+            </a>
+            
             <div class="language-switch">
                 <a href="./index.html" lang="es">ES</a>
                 <span>|</span>
                 <a href="./index-en.html" lang="en">EN</a>
             </div>
+            
             <input type="checkbox" id="menu-btn" class="menu-btn">
             <label for="menu-btn" class="menu-burger">
                 <i class="bi bi-list menu-open"></i>
                 <i class="bi bi-x-lg menu-close"></i>
             </label>
+            
             <div class="layer">
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
@@ -52,7 +59,7 @@
                     <li><a href="../socials/index.html">Socials</a></li>
                     <li><a href="index.html">Services <i class="bi bi-caret-down-fill"></i></a>
                         <ul class="list-services">
-                            <li><a href="#">Proyecto1</a></li>
+                            <li><a href="../chat-agent/chatbot.html">Alexbot</a></li>
                             <li><a href="#">Proyecto2</a></li>
                             <li><a href="#">Proyecto3</a></li>
                         </ul>
@@ -61,64 +68,97 @@
                         <i class="bi bi-music-note-beamed"></i>
                     </button>
                     <audio id="audioPlayer"></audio>
-                    <li class="login"><a class="login" href="../login/index.html"><i class="bi bi-box-arrow-in-right"> </i>Login</a></li>
+                    <li class="login">
+                        <a class="login" href="../login/index.html">
+                            <i class="bi bi-box-arrow-in-right"></i> Login
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="wave"></div>
         </nav>
-        <main>
-            <h1 class="title">¡Proyectos en Marcha!</h1>
-            <section class="project" id="project1">
-                <h2>- Proyecto 1. Fecha: 10/03/2025 <i class="bi bi-calendar-check-fill"></i></h2>
-                <p>Descripción del Proyecto 1.</p>
-                <a href="./proyecto1.html" class="project-link">Ver Proyecto 1 <i class="bi bi-kanban-fill"></i></a>
-            </section>
-            <section class="project" id="project2">
-                <h2>- Proyecto 2. Fecha: 10/03/2025 <i class="bi bi-calendar-check-fill"></i></h2>
-                <p>Descripción del Proyecto 2.</p>
-                <a href="./proyecto2.html" class="project-link">Ver Proyecto 2 <i class="bi bi-kanban-fill"></i></a>
-            </section>
-            <section class="project" id="project3">
-                <h2>- Proyecto 3. Fecha: Undefined <i class="bi bi-calendar2-x-fill"></i></h2>
-                <p>Descripción del Proyecto 3.</p>
-                <a href="./proyecto3.html" class="project-link">Ver Proyecto 3 <i class="bi bi-kanban-fill"></i> </a>
-            </section>
-        </main>
-        <footer>
+    </header>
+
+    <main>
+        <h1 class="title">¡Proyectos en Marcha!</h1>
         
-            <div class="foo-socials">
-                <p>Alexander &copy; 2025 <br>
-                    <a href="#">· Visit My Social Media</a>
-                    <br>
-                    <a href="#"><i class="bi bi-instagram"> Sígueme</i></a>
-                    <br>
-                    <a href="#"><i class="bi bi-whatsapp"> contactamé</i></a>
-                    <br>
-                    <a href="#"><i class="bi bi-envelope-at-fill"> escribeme un e-mail</i></a>
-                </p>
-            </div>
-            <div class="foo-pub">
-                <p>Visita mis últimas Entradas <br>
-                    <a href="../index.html">· Inicio</a>
-                    <a href="../contacto/index.html">· Contacto</a>
-                    <a href="../socials/index.html">· Socials</a>
-                    <a href="./index.html">· Services</a>
-                    <a href="../login/index.html">· Login</a>
-                </p>
-                
-            </div>
-            <div class="tributo">
-                <p>Designed by me.
-                    <br>
-                    <a href="#">· Política de Privacidad</a>
-                    <br>
-                    <a href="#">· Términos y Condiciones</a>
-                    <br>
-                    <a href="#">· Cookies</a>
-                </p>
-    
-            </div>
-        </footer>
-        <script src="../js/music.js"></script>
+        <section class="projects-grid">
+            <article class="project" id="project1">
+                <h2>
+                    <span>AlexBot</span>
+                    <i class="bi bi-calendar-check-fill"></i>
+                </h2>
+                <p class="project-date">Fecha de creación: 05/11/2025</p>
+                <p><strong>Descripción del Proyecto 1.</strong><br><br> AlexBot, tu asistente virtual experto en el perfil de Alexander, puedo generar una descripción profesional y entusiasta que refleje el propósito y el contenido de esta web.</p>
+                <a href="../chat-agent/chatbot.html" class="project-link">
+                    Ver Proyecto 1
+                    <i class="bi bi-kanban-fill"></i>
+                </a>
+            </article>
+
+            <article class="project" id="project2">
+                <h2>
+                    <span>Proyecto 2</span>
+                    <i class="bi bi-calendar-check-fill"></i>
+                </h2>
+                <p class="project-date">Fecha: 10/03/2025</p>
+                <p>Descripción del Proyecto 2. Una iniciativa enfocada en mejorar la experiencia del usuario mediante interfaces modernas.</p>
+                <a href="./proyecto2.html" class="project-link">
+                    Ver Proyecto 2
+                    <i class="bi bi-kanban-fill"></i>
+                </a>
+            </article>
+
+            <article class="project" id="project3">
+                <h2>
+                    <span>Proyecto 3</span>
+                    <i class="bi bi-calendar2-x-fill"></i>
+                </h2>
+                <p class="project-date">Fecha: Por definir</p>
+                <p>Descripción del Proyecto 3. Un proyecto ambicioso que está en fase de planificación y próximamente estará disponible.</p>
+                <a href="./proyecto3.html" class="project-link">
+                    Ver Proyecto 3
+                    <i class="bi bi-kanban-fill"></i>
+                </a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foo-socials">
+            <p>Alexander &copy; 2025 <br>
+                <a href="#">· Visit My Social Media</a>
+                <br>
+                <a href="#"><i class="bi bi-instagram"></i> Sígueme</a>
+                <br>
+                <a href="#"><i class="bi bi-whatsapp"></i> Contáctame</a>
+                <br>
+                <a href="#"><i class="bi bi-envelope-at-fill"></i> Escríbeme un e-mail</a>
+            </p>
+        </div>
+        
+        <div class="foo-pub">
+            <p>Visita mis últimas Entradas <br>
+                <a href="../index.html">· Inicio</a>
+                <a href="../contacto/index.html">· Contacto</a>
+                <a href="../socials/index.html">· Socials</a>
+                <a href="./index.html">· Services</a>
+                <a href="../login/index.html">· Login</a>
+            </p>
+        </div>
+        
+        <div class="tributo">
+            <p>Designed by me.
+                <br>
+                <a href="#">· Política de Privacidad</a>
+                <br>
+                <a href="#">· Términos y Condiciones</a>
+                <br>
+                <a href="#">· Cookies</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../js/music.js"></script>
 </body>
 </html>
